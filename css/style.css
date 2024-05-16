@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.green {
+    background-color: #009688;
+}
+
+.gray {
+    background-color: #DADBD4;
+}
+
+
+.white {
+    background-color: white;
+}
+
+.sky{
+    background-color: #8edafc;
+}
+
+.sky2{
+    color: #8edafc;
+}
+
+.size {
+    font-size: 0.8rem;
+}
+
+.space {
+    margin-top: -45rem;
+}
+
+
+.imgChat {
+    background-image: url(../img/avatar_io.jpg);
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.msg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
