@@ -12,6 +12,10 @@
     background-color: #DADBD4;
 }
 
+.grlight {
+    background-color: #f3eeea;
+}
+
 
 .white {
     background-color: white;
@@ -59,19 +63,13 @@ li {
     list-style-type: none;
 }
 
-.hours {
-    margin-left: 23rem;
-    font-size: 0.8rem;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-   
-    
-   
-}
 
 .img2 {
     background-image: url(../img/mine.jpg);
     background-size: contain;
-    height: 80vh;
+    height: 75vh;
+}
+
+.space2 {
+    margin-left: 5rem;
 }
