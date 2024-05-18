@@ -17,7 +17,7 @@ const contacts= [
             {
                 date: '10/01/2020 16:15:22',
                 message: 'Tutto fatto!',
-                status: 'received'
+                status: 'sent'
             }
         ],
     },
@@ -176,18 +176,21 @@ createApp({
     data() {
         return {
             contacts,
-           
+            activeContact: null
            
 
 
             
             
         }
+
+        
     },
     methods: {
-
        
-      
+        selectChat(contatto) {
+            this.activeContact = contatto;
+          }
        
         
 
