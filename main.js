@@ -186,6 +186,7 @@ createApp({
 
         
     },
+    //-----RICERCA CHAT-----//
     computed: {
         filteredContacts() {
           if (this.searchQuery === '') {
@@ -196,11 +197,14 @@ createApp({
         }
       },
     methods: {
-       
+        
+        
+        //-------SELEZIONA CHAT-------///
         selectChat(contatto) {
             this.activeContact = contatto;
         },
-
+        
+        //---------INVIARE MESSAGGIO-----//
         sendMessage() {
             
             const sentMessage = {
@@ -210,7 +214,8 @@ createApp({
             
             this.activeContact.messages.push(sentMessage);
             this.newMessage = ''; 
-
+            
+            //---------RICEVERE RISPOSTA------//
             setTimeout(() => {
                 const receivedMessage = {
                     status: 'received',
@@ -220,16 +225,6 @@ createApp({
                 this.activeContact.messages.push(receivedMessage);
             }, 1000);
         },
-
-
-
-            
-            
-            
-        
-          
-       
-        
 
     },
     mounted() {

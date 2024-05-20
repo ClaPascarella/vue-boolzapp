@@ -74,4 +74,9 @@ li {
     margin-left: 5rem;
 }
 
+.chat:hover {
+    background-color:  #DADBD4;
+    
+}
+
 
