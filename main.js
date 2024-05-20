@@ -176,9 +176,9 @@ createApp({
     data() {
         return {
             contacts,
-            activeContact: null
+            activeContact: null,
+            searchQuery: '',
            
-
 
             
             
@@ -186,11 +186,34 @@ createApp({
 
         
     },
+    computed: {
+        filteredContacts() {
+          if (this.searchQuery === '') {
+            return this.contacts;
+          } else {
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
+          }
+        }
+      },
     methods: {
        
         selectChat(contatto) {
             this.activeContact = contatto;
-          }
+        },
+
+        // sendMessage() {
+        //     this.contacts[this.userSelect].messages.push (
+
+        //         {
+        //             date: '10/01/2020 15:51:00',
+        //             message: this.textUser,
+        //             status: 'send'
+        //         }
+        //     )
+
+        //     }
+        
+          
        
         
 
