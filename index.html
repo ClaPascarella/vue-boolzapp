@@ -69,9 +69,9 @@
                             <div class="col-12">
                                 <nav class="navbar bg-body-tertiary">
                                     <div class="container-fluid">
-                                        <form class="d-flex" role="search" style="width: 100%;">
+                                        <div class="d-flex" role="search" style="width: 100%;">
                                           <input class="form-control me-2" type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search" v-model="searchQuery">
-                                        </form>
+                                        </div>
                                     </div>
                                   </nav>
                             </div>
@@ -177,9 +177,9 @@
                                 <div class="col-12 z-3 grlight d-flex justify-content-between" style="max-width: 100%;">
                                     <button class=" text-secondary-emphasis fs-5 ml-2 mr-2 border border-0"><i class="fa-regular fa-face-smile"></i></button>
                                     
-                                    <form class="d-flex mt-1 mb-1" role="search" style="width: 100%;">
-                                        <input class="form-control mt-1 mx-2" type="search" placeholder="Scrivi un messaggio" aria-label="Search">
-                                    </form>
+                                    <div class="d-flex mt-1 mb-1" role="search" style="width: 100%;">
+                                        <input class="form-control mt-1 mx-2" type="search" placeholder="Scrivi un messaggio" aria-label="Search" v-model="newMessage" @keyup.enter="sendMessage">
+                                    </div>
 
                                     <button class=" text-secondary-emphasis fs-5 border border-0 ms-3 "><i class="fa-solid fa-microphone"></i></button>
 

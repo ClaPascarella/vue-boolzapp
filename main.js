@@ -178,7 +178,7 @@ createApp({
             contacts,
             activeContact: null,
             searchQuery: '',
-           
+            newMessage: ''
 
             
             
@@ -201,17 +201,19 @@ createApp({
             this.activeContact = contatto;
         },
 
-        // sendMessage() {
-        //     this.contacts[this.userSelect].messages.push (
-
-        //         {
-        //             date: '10/01/2020 15:51:00',
-        //             message: this.textUser,
-        //             status: 'send'
-        //         }
-        //     )
-
-        //     }
+          sendMessage() {
+            
+                const sentMessage = {
+                    status: 'sent',
+                    message: this.newMessage
+                };
+                
+                this.activeContact.messages.push(sentMessage);
+                
+            }
+            
+            
+            
         
           
        
