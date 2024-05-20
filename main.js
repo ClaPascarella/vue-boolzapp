@@ -178,8 +178,8 @@ createApp({
             contacts,
             activeContact: null,
             searchQuery: '',
-            newMessage: ''
-
+            newMessage: '',
+            newRisp: 'ok'
             
             
         }
@@ -201,16 +201,28 @@ createApp({
             this.activeContact = contatto;
         },
 
-          sendMessage() {
+        sendMessage() {
             
-                const sentMessage = {
-                    status: 'sent',
-                    message: this.newMessage
+            const sentMessage = {
+                status: 'sent',
+                message: this.newMessage
+            };
+            
+            this.activeContact.messages.push(sentMessage);
+            this.newMessage = ''; 
+
+            setTimeout(() => {
+                const receivedMessage = {
+                    status: 'received',
+                    message: 'ok'
                 };
                 
-                this.activeContact.messages.push(sentMessage);
-                
-            }
+                this.activeContact.messages.push(receivedMessage);
+            }, 1000);
+        },
+
+
+
             
             
             
